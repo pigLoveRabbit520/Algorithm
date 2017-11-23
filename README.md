@@ -2,81 +2,77 @@
 
 快速排序应用了**分治**策略
 
-
-
 现在贴上PHP实现：
 
-`<?php`
+`<?php`
 
-`$arr = [2, -1, -2, 100, 5];`
+`$arr = [2, -1, -2, 100, 5];`
 
-`function quickSort(&$arr, $start, $end) {`
+`function quickSort(&$arr, $start, $end) {`
 
-`    if($end - $start === 1) {`
+`if($end - $start === 1) {`
 
-`        if($arr[$start] > $arr[$end]) {`
+`if($arr[$start] > $arr[$end]) {`
 
-`            $temp = $arr[$start];`
+`$temp = $arr[$start];`
 
-`            $arr[$start] = $arr[$end];`
+`$arr[$start] = $arr[$end];`
 
-`            $arr[$end] = $temp;`
+`$arr[$end] = $temp;`
 
-`        }`
+`}`
 
-`    } elseif ($end - $start > 1) {`
+`} elseif ($end - $start > 1) {`
 
-`        $middle = $arr[$start];`
+`$middle = $arr[$start];`
 
-`        $i = $start;`
+`$i = $start;`
 
-`        $j = $end;`
+`$j = $end;`
 
-`        while ($i !== $j && $i <= $end && $j >= $start) {`
+`while ($i !== $j && $i <= $end && $j >= $start) {`
 
-`            while ($arr[$j] >= $middle && $j > $i) {`
+`while ($arr[$j] >= $middle && $j > $i) {`
 
-`                $j--;`
+`$j--;`
 
-`            }`
+`}`
 
-`            if($j > $i) {`
+`if($j > $i) {`
 
-`                $arr[$i] = $arr[$j];`
+`$arr[$i] = $arr[$j];`
 
-`                $i++;`
+`$i++;`
 
-`            }`
+`}`
 
-`            while ($arr[$i] <= $middle && $i < $j) {`
+`while ($arr[$i] <= $middle && $i < $j) {`
 
-`                $i++;`
+`$i++;`
 
-`            }`
+`}`
 
-`            if($i < $j) {`
+`if($i < $j) {`
 
-`                $arr[$j] = $arr[$i];`
+`$arr[$j] = $arr[$i];`
 
-`                $j--;`
+`$j--;`
 
-`            }`
+`}`
 
-`        }`
+`}`
 
-`        $arr[$i] = $middle;`
+`$arr[$i] = $middle;`
 
-`        quickSort($arr, $start, $i - 1);`
+`quickSort($arr, $start, $i - 1);`
 
-`        quickSort($arr, $i + 1, $end);`
+`quickSort($arr, $i + 1, $end);`
 
-`    }`
+`}`
 
-`}`
+`}`
 
-``
-
-`quickSort($arr, 0, count($arr) - 1);`
+`quickSort($arr, 0, count($arr) - 1);`
 
 `print_r($arr);`
 
