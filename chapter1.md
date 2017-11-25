@@ -133,7 +133,7 @@ function quickSort($arr) {
 print_r(quickSort($arr));
 ```
 
-Javacript版本
+Javascript版本
 
 ```
 let arr = [2, -1, -2, 100, 5];
@@ -178,7 +178,7 @@ def quicksort(arr):
     middle = [pivot]
     right = [x for x in arr if x > pivot]
     return quicksort(left) + middle + quicksort(right)
-    
+
 print( quicksort([3,6,8,10,1,2,1]) )
 ```
 
