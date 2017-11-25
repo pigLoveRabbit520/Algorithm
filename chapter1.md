@@ -140,32 +140,32 @@ let arr = [2, -1, -2, 100, 5];
 
 
 function quickSort(arr) {
-	if(!arr || arr.length <= 1) {
-		return arr;
-	}
-	let indexMiddle = Math.floor(arr.length / 2);
-	let middle = arr[indexMiddle];
-	let arrLess = [];
-	let arrGreater = [];
-	for (let i = 0; i < arr.length; i++) { 
-		if(i != indexMiddle && arr[i] <= middle) {
-			arrLess.push(arr[i]);
-		}
+    if(!arr || arr.length <= 1) {
+        return arr;
+    }
+    let indexMiddle = Math.floor(arr.length / 2);
+    let middle = arr[indexMiddle];
+    let arrLess = [];
+    let arrGreater = [];
+    for (let i = 0; i < arr.length; i++) { 
+        if(i != indexMiddle && arr[i] <= middle) {
+            arrLess.push(arr[i]);
+        }
 
-	}
-	for (let j = 0; j < arr.length; j++) {
-		if(j != indexMiddle && arr[j] > middle) {
-			arrGreater.push(arr[j]);
-		}
-	}
-	return quickSort(arrLess).concat(middle, quickSort(arrGreater));
+    }
+    for (let j = 0; j < arr.length; j++) {
+        if(j != indexMiddle && arr[j] > middle) {
+            arrGreater.push(arr[j]);
+        }
+    }
+    return quickSort(arrLess).concat(middle, quickSort(arrGreater));
 }
 
 
 console.log(quickSort(arr));
 ```
 
-Python版本（简短很多，果然是人生苦短，快用python”）
+Python版本（简短很多，果然是”人生苦短，快用python“）
 
 ```
 
