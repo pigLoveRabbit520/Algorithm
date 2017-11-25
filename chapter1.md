@@ -104,30 +104,30 @@ $arr = [2, -1, -2, 100, 5];
 
 
 function quickSort($arr) {
-	if(empty($arr) || count($arr) <= 1) {
-		return $arr;
-	}
-	$len = count($arr);
-	$indexMiddle = $len / 2;
-	$middle = $arr[$indexMiddle];
-	$arrLess = [];
-	$arrGreater = [];
-	for ($i = 0; $i < $len; $i++) { 
-		if($i != $indexMiddle && $arr[$i] <= $middle) {
-			array_push($arrLess, $arr[$i]);
-		}
+    if(empty($arr) || count($arr) <= 1) {
+        return $arr;
+    }
+    $len = count($arr);
+    $indexMiddle = floor($len / 2);
+    $middle = $arr[$indexMiddle];
+    $arrLess = [];
+    $arrGreater = [];
+    for ($i = 0; $i < $len; $i++) { 
+        if($i != $indexMiddle && $arr[$i] <= $middle) {
+            array_push($arrLess, $arr[$i]);
+        }
 
-	}
-	for ($j = 0; $j < $len; $j++) { 
-		if($j != $indexMiddle && $arr[$j] > $middle) {
-			array_push($arrGreater, $arr[$j]);
-		}
-	}
-	return array_merge(
-		quickSort($arrLess), 
-		[$middle], 
-		quickSort($arrGreater)
-	);
+    }
+    for ($j = 0; $j < $len; $j++) { 
+        if($j != $indexMiddle && $arr[$j] > $middle) {
+            array_push($arrGreater, $arr[$j]);
+        }
+    }
+    return array_merge(
+        quickSort($arrLess), 
+        [$middle], 
+        quickSort($arrGreater)
+    );
 }
 
 print_r(quickSort($arr));
