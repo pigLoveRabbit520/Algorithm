@@ -168,7 +168,18 @@ console.log(quickSort(arr));
 Python版本（简短很多，果然是”人生苦短，快用python“）
 
 ```
+import math
 
+def quicksort(arr):
+    if len(arr) <= 1:
+        return arr
+    pivot = arr[math.floor(len(arr) / 2)]
+    left = [x for x in arr if x < pivot]
+    middle = [pivot]
+    right = [x for x in arr if x > pivot]
+    return quicksort(left) + middle + quicksort(right)
+    
+print( quicksort([3,6,8,10,1,2,1]) )
 ```
 
 
