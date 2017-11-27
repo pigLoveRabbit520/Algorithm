@@ -1,13 +1,12 @@
 # Summary
 
-* [内排序](basics_sorting/README.md)
-   * [冒泡排序](basics_sorting/bubble_sort.md)
-   * [选择排序](basics_sorting/selection_sort.md)
-   * [快速排序](basics_sorting/quick_sort.md.md)
-   * [堆排序](basics_sorting/heap_sort.md)
-   * [Bucket Sort](basics_sorting/bucket_sort.md)
-   * [Counting Sort](basics_sorting/counting_sort.md)
-   * [Radix Sort](basics_sorting/radix_sort.md)
+* [内排序](basics_sort/README.md)
+   * [选择排序](basics_sort/selection_sort.md)
+   * [插入排序](basics_sort/insertion_sort.md)
+   * [冒泡排序](basics_sort/bubble_sort.md)
+   * [快速排序](basics_sort/quick_sort.md)
+   * [堆排序](basics_sort/heap_sort.md)
+   * [Radix Sort](basics_sort/radix_sort.md)
 
 * [八皇后问题](ba-huang-hou-wen-ti.md)
 
