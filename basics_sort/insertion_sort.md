@@ -2,6 +2,8 @@
 
 这个排序的原理就是往一个**小的有序区再插入一个数**，小的有序区，从长度为1的数组开始
 
+![](http://upload-images.jianshu.io/upload_images/3193867-28a43b5f4dd10782.gif?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 javascript实现
 
 ```
