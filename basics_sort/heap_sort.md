@@ -1,0 +1,64 @@
+# 堆排序
+
+什么是堆？ **堆**是一棵**顺序存储**的**完全二叉树**。
+
+其中每个结点的关键字都**不大于**其孩子结点的关键字，这样的堆称为**小根堆**。
+
+其中每个结点的关键字都**不小于**其孩子结点的关键字，这样的堆称为**大根堆**。
+
+javascript实现：
+
+    // 一般升序使用大根堆，降序使用小根堆
+
+    function heapAjust(arr, parent, length) {
+    	let temp = arr[parent]; // temp保存当前父节点
+    	let child = 2 * parent + 1; // 先获得左孩子
+
+    	while (child < length) {
+    	    // 如果有右孩子结点，并且右孩子结点的值大于左孩子结点，则选取右孩子结点
+    	    if (child + 1 < length && arr[child] < arr[child + 1]) {
+    	        child++;
+    	    }
+
+    	    // 如果父结点的值已经大于孩子结点的值，则直接结束
+    	    if (temp >= arr[child])
+    	        break;
+
+    	    // 把孩子结点的值赋给父结点
+    	    arr[parent] = arr[child];
+
+    	    // 选取孩子结点的左孩子结点,继续向下筛选
+    	    parent = child;
+    	    child = 2 * child + 1;
+    	}
+
+    	arr[parent] = temp;
+    }
+
+
+    function heapSort(arr) {
+    	// 循环建立初始堆
+    	for (let i = Math.ceil(arr.length / 2); i >= 0; i--) {
+    	    heapAjust(arr, i, arr.length);
+    	}
+
+    	// 进行n-1次循环，完成排序
+    	for (let i = arr.length - 1; i > 0; i--) {
+    	    // 最后一个元素和第一元素进行交换
+    	    let temp = arr[i];
+    	    arr[i] = arr[0];
+    	    arr[0] = temp;
+
+    	    // 筛选 R[0] 结点，得到i-1个结点的堆
+    	    heapAjust(arr, 0, i);
+    	    console.log(`第 ${arr.length - i} 趟: \t`);
+    	    console.log(arr);
+    	}
+    }
+
+
+    let arr = [1, -2, 0, -1, 4, -200, 20];
+    heapSort(arr);
+
+
+
