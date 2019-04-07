@@ -12,7 +12,7 @@
 
 **go实现：**
 
-```
+```text
 package main
 
 import (
@@ -84,6 +84,4 @@ func main() {
     MergeSort(arr)
 }
 ```
-
-
 

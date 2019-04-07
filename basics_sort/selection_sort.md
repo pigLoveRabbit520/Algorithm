@@ -4,7 +4,7 @@
 
 javascript实现：
 
-```
+```text
 function selectionSort(arr) {
     if(arr.length === 1) {
         return;
@@ -28,6 +28,4 @@ let arr = [1, -2, 0, -1, 4, -200, 20];
 selectionSort(arr);
 console.log(arr);
 ```
-
-
 

@@ -1,12 +1,14 @@
 # 快速排序
 
+## 快速排序
+
 快速排序应用了**分治**策略，详细介绍可以移步这里[Just for fun——迅速写完快速排序](https://segmentfault.com/a/1190000012024678)
 
-# 高效写法
+## 高效写法
 
 现贴上**PHP**实现：
 
-```
+```text
 <?php
 
 $arr = [2, -1, -2, 100, 5];
@@ -51,7 +53,7 @@ print_r($arr);
 
 Javascript实现：
 
-```
+```text
 let arr = [2, -1, -2, 100, 5];
 
 function quickSort(arr, start, end) {
@@ -91,13 +93,13 @@ quickSort(arr, 0, arr.length - 1);
 console.log(arr);
 ```
 
-## 另一种简单写法
+### 另一种简单写法
 
 这种写法就是每次都从头遍历数组，小于等于中间量的数放**小于等于数组**，大于中间量的数放一个**大于数组**，然后再对这两个数组继续递归，直到达到递归停止点
 
 PHP版本
 
-```
+```text
 <?php
 
 $arr = [2, -1, -2, 100, 5];
@@ -135,7 +137,7 @@ print_r(quickSort($arr));
 
 Javascript版本
 
-```
+```text
 let arr = [2, -1, -2, 100, 5];
 
 
@@ -167,7 +169,7 @@ console.log(quickSort(arr));
 
 Python版本（简短很多，果然是”人生苦短，快用python“）
 
-```
+```text
 import math
 
 def quicksort(arr):
@@ -181,6 +183,4 @@ def quicksort(arr):
 
 print( quicksort([3,6,8,10,1,2,1]) )
 ```
-
-
 

@@ -6,7 +6,7 @@
 
 javascript实现：
 
-```js
+```javascript
 function bubbleSort(arr) {
     if(arr.length === 1) {
         return;
@@ -47,8 +47,4 @@ public static void bubbleSort(int[] numbers)
     }
 }
 ```
-
-
-
-
 

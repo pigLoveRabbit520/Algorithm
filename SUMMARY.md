@@ -1,4 +1,4 @@
-# Summary
+# Table of contents
 
 * [Introduction](README.md)
 * [内排序](basics_sort/README.md)
@@ -9,4 +9,6 @@
   * [快速排序](basics_sort/quick_sort.md)
   * [堆排序](basics_sort/heap_sort.md)
   * [归并排序](basics_sort/merge_sort.md)
-* [八皇后问题](ba-huang-hou-wen-ti.md)
+* [递归问题](ba-huang-hou-wen-ti/README.md)
+  * [八皇后问题](ba-huang-hou-wen-ti/ba-huang-hou-wen-ti.md)
+

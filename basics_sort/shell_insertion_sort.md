@@ -4,7 +4,7 @@
 
 **javascript实现**
 
-```
+```text
 // 步长越大分组越多
 function shellSort(arr) {
     for (let gap = Math.floor(arr.length / 2); gap > 0; gap = Math.floor(gap / 2)) {
@@ -32,37 +32,35 @@ shellSort(arr);
 
 **go语言实现**
 
-```
+```text
 package main
 
 import (
-	"fmt"
+    "fmt"
 )
 
 func shellSort(arr []int) {
-	arrLen := len(arr)
-	// 设置步长
-	for gap := arrLen / 2; gap > 0; gap /= 2 {
-		for i := 0; i < gap; i++ {
-			for j := i + 1; j < arrLen; j += gap {
-				temp := arr[j]
-				k := j - 1
-				for k >= 0 && arr[k] > temp {
-					arr[k+1] = arr[k]
-					k--
-				}
-				arr[k+1] = temp
-			}
-		}
-	}
+    arrLen := len(arr)
+    // 设置步长
+    for gap := arrLen / 2; gap > 0; gap /= 2 {
+        for i := 0; i < gap; i++ {
+            for j := i + 1; j < arrLen; j += gap {
+                temp := arr[j]
+                k := j - 1
+                for k >= 0 && arr[k] > temp {
+                    arr[k+1] = arr[k]
+                    k--
+                }
+                arr[k+1] = temp
+            }
+        }
+    }
 }
 
 func main() {
-	arr := []int{2, 4, -1, 8}
-	shellSort(arr)
-	fmt.Println(arr)
+    arr := []int{2, 4, -1, 8}
+    shellSort(arr)
+    fmt.Println(arr)
 }
 ```
-
-
 
