@@ -11,4 +11,6 @@
   * [归并排序](basics_sort/merge_sort.md)
 * [递归问题](ba-huang-hou-wen-ti/README.md)
   * [八皇后问题](ba-huang-hou-wen-ti/ba-huang-hou-wen-ti.md)
+* [动态规划](dong-tai-gui-hua/README.md)
+  * [LCS](dong-tai-gui-hua/lcs.md)
 
