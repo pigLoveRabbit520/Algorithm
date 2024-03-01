@@ -4,7 +4,7 @@
 
 javascript实现
 
-```text
+```
 const NUM_QUEENS = 8
 let solutionNum = 0
 
@@ -42,73 +42,4 @@ function isLegal(queens, row) {
 }
 
 eightQueensPuzzle(queens);
-```
-
-用堆栈方式解决
-```
-class Stack {
-    constructor() {
-        this.top = -1
-        this.arr = [0] // 记录列值，从1开始
-    }
-
-    setItem(item) {
-        this.top++
-        if (this.arr.length > this.top) {
-            this.arr[this.top] = item
-        } else {
-            this.arr.push(item)
-        }
-    }
-
-    getTopItem() {
-        return this.arr[this.top]
-    }
-
-    display() {
-        let res = []
-        for (let row = 1; row <= this.top; row++) {
-            res.push(`(${row}, ${this.arr[row]})`)
-        }
-        console.log(res.join(' '))
-    }
-}
-
-function placeQueen(arr, top, col) {
-    if (top <= 1) {
-        return true 
-    } else {
-        for (let row = 1; row < top; row++) {
-            if (arr[row] === col || (Math.abs((arr[row] - col)) === Math.abs(row - top))) {
-                return false
-            }
-        }
-        return true
-    }
-}
-
-function queenProblem(num) {
-    const stack = new Stack()
-    stack.top = 0 // 不从0开始
-    stack.setItem(0) // 放入(1,0)
-    while (stack.top > 0) {
-        let find = false
-        for (let col = stack.getTopItem() + 1; col <= num; col++) {
-            if (placeQueen(stack.arr, stack.top, col)) {
-                stack.arr[stack.top] = col
-                find = true
-                break
-            }
-        }
-        if (find) {
-            if (stack.top === num) {
-                stack.display() // 打印结果
-            } else {
-                stack.setItem(0) // 进入下一行从0开始
-            }
-        } else {
-            stack.top--
-        }
-    }
-}
 ```
